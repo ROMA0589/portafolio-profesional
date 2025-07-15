@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "title": "Proyecto 1",
+      "description": "Descripción del Proyecto 1",
+      "link": "https://enlace-al-proyecto-1.com"
+    },
+    {
+      "title": "Proyecto 2",
+      "description": "Descripción del Proyecto 2",
+      "link": "https://enlace-al-proyecto-2.com"
+    },
+    {
+      "title": "Proyecto 3",
+      "description": "Descripción del Proyecto 3",
+      "link": "https://enlace-al-proyecto-3.com"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+/* Responsive styles file */
+
+@media (max-width: 1200px) {
+    /* Styles for screens smaller than 1200px */
+}
+
+@media (max-width: 992px) {
+    /* Styles for screens smaller than 992px */
+}
+
+@media (max-width: 768px) {
+    /* Tablet */
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        position: absolute;
+        top: 1rem;
+        right: 20px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .language-selector {
+        order: 2;
+        margin-top: 0;
+        position: absolute;
+        top: 1rem;
+        right: 70px;
+    }
+
+    #language-select {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile */
+    .container {
+        padding: 0 15px;
+    }
+
+    .site-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .section {
+        margin-bottom: 3rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    .language-selector {
+        right: 60px;
+    }
+
+    #language-select {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+
+    .nav-toggle {
+        width: 25px;
+        height: 25px;
+        right: 15px;
+    }
+
+    .nav-toggle span {
+        height: 2px;
+        margin: 2px 0;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .section h2 {
+        font-size: 3rem;
+    }
+
+    .section p {
+        font-size: 1.2rem;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Navigation animations */
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

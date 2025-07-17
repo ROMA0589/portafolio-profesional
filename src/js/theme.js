@@ -5,24 +5,14 @@ class ThemeManager {
     }
 
     init() {
-        // Cargar tema guardado
         const savedTheme = localStorage.getItem('theme') || 'light';
         this.setTheme(savedTheme);
 
-        // Event listener para el botón
         if (this.themeToggle) {
             this.themeToggle.addEventListener('click', () => {
                 this.toggleTheme();
             });
         }
-
-        // Detectar preferencia del sistema
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-        prefersDark.addListener((e) => {
-            if (!localStorage.getItem('theme')) {
-                this.setTheme(e.matches ? 'dark' : 'light');
-            }
-        });
     }
 
     setTheme(theme) {
@@ -42,7 +32,6 @@ class ThemeManager {
     }
 }
 
-// Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     new ThemeManager();
 });

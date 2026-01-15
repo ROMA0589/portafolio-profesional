@@ -56,28 +56,6 @@ portafolio-profesional/
 └── LICENSE                     # Licencia del proyecto
 ```
 
-## 🚀 Instalación y Uso
-
-### Clonar el Repositorio
-```bash
-git clone https://github.com/ROMA0589/portafolio-profesional.git
-cd portafolio-profesional
-```
-
-### Ejecutar Localmente
-```bash
-# Opción 1: Abrir directamente
-open src/index.html
-
-# Opción 2: Servidor local con Python
-cd src
-python -m http.server 8000
-
-# Opción 3: Servidor local con Node.js
-npx http-server src -p 8000
-```
-
-## 🎯 Funcionalidades Implementadas
 
 ### 🔧 Interactividad
 - [x] Navegación suave entre secciones

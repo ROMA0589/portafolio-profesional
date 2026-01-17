@@ -137,22 +137,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Enhanced smooth scrolling for navigation
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const headerHeight = document.querySelector('.site-header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                navList?.classList.remove('active');
-                navToggle?.classList.remove('active');
+            // Solo prevenir y hacer scroll si es un enlace interno (ancla)
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    const headerHeight = document.querySelector('.site-header').offsetHeight;
+                    const targetPosition = targetSection.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    navList?.classList.remove('active');
+                    navToggle?.classList.remove('active');
+                }
             }
         });
     });
